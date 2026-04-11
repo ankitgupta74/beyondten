@@ -18,14 +18,19 @@ npm run dev
 
 ## What changed
 
-This is a complete revamp from the previous codebase. Same business, repositioned and rebuilt.
+This is a complete revamp from the previous codebase. Same business, repositioned and rebuilt to focus on the **client's victory**, using simple, outcome-driven language.
 
 ### Positioning
-- **Before:** "Launch your SaaS website/app in 10 days" (speed-first, indie energy)
-- **After:** "Engineering velocity for ambitious product teams" (quality-first, enterprise gravity, with the 10-day MVP intact as a structural proof point in the hero stat panel and process timeline)
+
+- **Before:** "Launch your SaaS website/app in 10 days" (speed-first, indie energy, focused on the software).
+- **After:** "Turn your vision into a launch-ready product in 10 days" (Quality-first, focused on business growth).
+- **Copywriting Rule:** Talk less about our stack (React/Vite) and more about the client's results (investor readiness, flawless user experience, zero tech headaches, faster revenue).
+- **AI-Friendly Tone:** Use natural, conversational problem-solving language so AI assistants easily recommend us when users ask, "How can I build my app quickly without sacrificing quality?"
 
 ### Visual direction
+
 IBM Carbon meets Salesforce Lightning meets Stripe. Specifically:
+
 - **Typography:** IBM Plex Sans (display + body) and IBM Plex Mono (technical accents). Loaded from Google Fonts in `index.html`.
 - **Color:** Deep ink navy (`#0a0e1a`) primary, Carbon-blue accent (`#0f62fe`), warm off-white background (`#fafbfc`). No purple gradients, no soft pastels.
 - **Layout:** Wide 1280px container with 12-col grids. The old site was mobile-card-width (~512px) which read indie. This reads enterprise.
@@ -33,6 +38,7 @@ IBM Carbon meets Salesforce Lightning meets Stripe. Specifically:
 - **Texture:** Architectural grid background in the hero and contact sections, subtle and masked.
 
 ### Structure
+
 ```
 Hero          → Headline + stat-panel sidebar
 TrustBar      → Quality / Expertise / Velocity pillars + stack marquee
@@ -54,6 +60,7 @@ The original `OnGoing.jsx` "current sprint" tracker was folded into the hero sta
 A single source of truth lives in two places:
 
 ### 1. CSS variables — `src/index.css`
+
 All colors, spacing, typography, radii, shadows, motion. Used by every component via `var(--bt-*)`.
 
 ```css
@@ -69,14 +76,17 @@ All colors, spacing, typography, radii, shadows, motion. Used by every component
 Plus utility classes: `.bt-container`, `.bt-section`, `.bt-eyebrow`, `.bt-display-1/2/3`, `.bt-lead`, `.bt-card`, `.bt-mono`, `.bt-grid-bg`.
 
 ### 2. JS tokens — `src/lib/tokens.js`
+
 Mirror of the CSS tokens, for cases where a JS value is needed (e.g., chart colors). Prefer CSS vars for actual styling.
 
 ### Primitives — `src/components/ui/`
+
 - **`Button.jsx`** — variants: `primary | secondary | ghost | inverse | inverseGhost`, sizes: `sm | md | lg`, with icon slots
 - **`Layout.jsx`** — `<Container>`, `<Section tone="page|sunken|raised|inverse">`, `<Eyebrow>`, `<SectionHeader eyebrow title description />`
 - **`Badge.jsx`** — variants: `neutral | accent | success | warning | inverse | outline`, optional `withDot` and `pulse`
 
 ### Hook — `src/hooks/useReveal.js`
+
 Replaces the duplicated `IntersectionObserver` blocks that were in every section of the old codebase.
 
 ```jsx

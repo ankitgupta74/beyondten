@@ -2,8 +2,8 @@ export const TESTIMONIALS = [
   {
     code: "REF-001",
     quote:
-      "We needed a website for our university fest, FLAYER'25. They delivered a fully working site — no delays, no tech headaches.",
-    headline: "Fast and exactly what we needed.",
+      "We needed a flawless digital platform for our massive university fest, FLAYER'25. They delivered a fast, reliable site that handled our traffic perfectly—zero delays, zero tech headaches.",
+    headline: "Fast, stress-free, and exactly what we needed.",
     author: "Event Organizer",
     role: "FLAYER'25",
     initial: "F",
@@ -11,8 +11,8 @@ export const TESTIMONIALS = [
   {
     code: "REF-002",
     quote:
-      "I had an app idea and couldn't wait months. beyondten gave me a working product in ten days. I showed it to my first users the same week.",
-    headline: "The clearest path from idea to launch.",
+      "I had a vision for an app but couldn't afford to wait months to build it. beyondten turned my concept into a fully functioning product in just 10 days. I was pitching to my first users the very next week.",
+    headline: "The fastest path from idea to real users.",
     author: "Startup Founder",
     role: "Tech Entrepreneur",
     initial: "T",

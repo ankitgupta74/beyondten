@@ -20,9 +20,9 @@ export default function Work() {
         <div ref={ref}>
           <div className="flex items-end justify-between gap-8 mb-14 flex-wrap">
             <SectionHeader
-              eyebrow="Selected Work"
-              title="Shipped products. Real users."
-              description="A sample of what ten days looks like in production. Every engagement ends on a public URL."
+              eyebrow="Client Success"
+              title="Real businesses launched in 10 days."
+              description="See how founders turned their ideas into live, revenue-generating products without the technical headaches."
               maxWidth="44rem"
             />
             <div className="hidden lg:flex items-center gap-2 mb-1">

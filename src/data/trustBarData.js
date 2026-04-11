@@ -7,21 +7,21 @@ import {
 export const PILLARS = [
   {
     icon: ShieldCheck,
-    label: "Quality",
-    title: "Production-grade by default",
-    desc: "Type-safe codebases, accessible UI, observability hooks, and a deployment pipeline you can keep building on.",
+    label: "Reliability",
+    title: "Built to scale from day one",
+    desc: "Your app won't break when users flood in. You get a secure, flawless product that earns customer trust and handles your business growth effortlessly.",
   },
   {
     icon: Layers,
-    label: "Expertise",
-    title: "Senior engineering only",
-    desc: "Founders work directly with senior engineers and designers. No account managers, no junior offshoring, no handoffs.",
+    label: "Partnership",
+    title: "Direct access to experts",
+    desc: "No middlemen or confusing handoffs. You collaborate directly with seasoned professionals who understand your business goals and turn your ideas into reality.",
   },
   {
     icon: Gauge,
-    label: "Velocity",
-    title: "Ten-day sprint cadence",
-    desc: "A disciplined ten-day delivery window with daily checkpoints. Speed is the byproduct of a process built around clarity.",
+    label: "Speed",
+    title: "Launch and earn faster",
+    desc: "Get your product to market in just 10 days. Beat your competitors, impress your investors, and start generating revenue without the usual tech delays.",
   },
 ];
 

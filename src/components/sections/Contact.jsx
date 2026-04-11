@@ -1,8 +1,6 @@
 import {
   ArrowUpRight,
   Mail,
-  MessageCircle,
-  Phone
 } from "lucide-react";
 import {
   FaInstagram,
@@ -56,7 +54,7 @@ export default function Contact() {
               className={`transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]
                 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
             >
-              <Eyebrow inverse>Start an engagement</Eyebrow>
+              <Eyebrow inverse>Ready to launch</Eyebrow>
             </div>
 
             <h2
@@ -67,8 +65,8 @@ export default function Contact() {
                 color: "white",
               }}
             >
-              Ship the next ten days
-              <span className="text-(--bt-accent-400)"> with us.</span>
+              Get your product live in
+              <span className="text-(--bt-accent-400)"> 10 days.</span>
             </h2>
 
             <p
@@ -79,9 +77,9 @@ export default function Contact() {
                 color: "rgba(255,255,255,0.7)",
               }}
             >
-              Tell us what you're building. We'll reply within twenty-four
-              hours, scope the engagement together, and start the sprint the
-              morning after.
+              Tell us about your business idea. We will reply within 24 hours,
+              map out exactly what you need to succeed, and start building your
+              product the very next morning.
             </p>
 
             <div
@@ -116,10 +114,10 @@ export default function Contact() {
               style={{ transitionDelay: "480ms" }}
             >
               <Badge variant="inverse" withDot pulse>
-                24-hour reply SLA
+                24-hour reply guaranteed
               </Badge>
               <span className="text-[0.8125rem] text-white/50">
-                Currently accepting new engagements
+                Currently accepting new projects
               </span>
             </div>
           </div>

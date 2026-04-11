@@ -7,15 +7,15 @@ export const PROJECTS = [
     sector: "Education / SaaS",
     year: "2025",
     summary:
-      "An all-in-one operations dashboard for library owners — seat allocation, fee collection, and automated member alerts.",
+      "Transformed manual library management into an automated dashboard. The founders can now easily collect fees and manage users without wasting hours on spreadsheets.",
     metrics: [
       {
-        label: "Build window",
-        value: "10 days"
+        label: "Time to market",
+        value: "10 days",
       },
       {
-        label: "Stack",
-        value: "React · Node"
+        label: "Business Impact",
+        value: "Hours saved daily",
       },
     ],
     image: "/LibraOS.png",
@@ -29,15 +29,15 @@ export const PROJECTS = [
     sector: "B2B Services",
     year: "2025",
     summary:
-      "A sharp, conversion-focused company website built to capture qualified leads from the moment it shipped.",
+      "Launched a professional, high-converting digital storefront that immediately established trust and started capturing qualified leads for the agency.",
     metrics: [
       {
-        label: "Build window",
-        value: "10 days"
+        label: "Time to market",
+        value: "10 days",
       },
       {
-        label: "Stack",
-        value: "React · Vite"
+        label: "Business Impact",
+        value: "Lead generation ready",
       },
     ],
     image: "/dotnovexure.png",

@@ -1,7 +1,5 @@
 import {
   ArrowUpRight,
-  Globe,
-  Smartphone,
   Check
 } from "lucide-react";
 import {
@@ -26,8 +24,8 @@ export default function Capabilities() {
         <div ref={ref}>
           <SectionHeader
             eyebrow="Capabilities"
-            title="Two engagements. Production from day one."
-            description="Both engagements ship a complete, deployed product within a ten-day delivery window. Pick the surface — we own the rest of the stack."
+            title="Everything you need to launch and grow."
+            description="Whether you need a powerful web platform or a sleek mobile app, you get a fully functioning, ready-to-use product in 10 days. You handle the business, we handle the tech."
           />
 
           <div className="grid lg:grid-cols-2 gap-6">

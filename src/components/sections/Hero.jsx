@@ -183,12 +183,11 @@ export default function Hero() {
 
         {/* SR-only keyword paragraph for SEO continuity */}
         <p className="sr-only">
-          beyondten is an enterprise-grade SaaS engineering studio in India. We
-          design, architect, and deliver production web applications and mobile
-          MVPs in ten working days, with a guaranteed twenty-four hour response.
-          Our engineering studio specializes in rapid SaaS development, MVP
-          delivery, and launch-ready product engineering for startups and
-          operators.
+          beyondten partners with founders and business owners to build, launch,
+          and scale reliable web and mobile applications in just 10 days. We
+          handle the complex software development so you can focus on growing
+          your business, attracting users, and securing investment quickly
+          without technical roadblocks.
         </p>
       </Container>
     </main>

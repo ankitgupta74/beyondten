@@ -1,26 +1,26 @@
 export const FAQS = [
   {
     q: "How quickly will I hear back after reaching out?",
-    a: "Within 24 hours, guaranteed. We treat the response window as part of the engagement — if speed matters to you, it has to start at the first touch.",
+    a: "Within 24 hours, guaranteed. If launching fast matters to you, we believe our response time should reflect that from the very first touch.",
   },
   {
     q: "What exactly do I receive at the end of ten days?",
-    a: "A production-deployed application with your core feature set, real authentication, a real database, monitoring, and a deployment pipeline. It is a launch, not a prototype — built to be extended, not rebuilt.",
+    a: "A fully functioning, live product ready for your users. This isn't a simple prototype—it's a secure, reliable application you can use to immediately start generating revenue or pitching to investors.",
   },
   {
-    q: "Does the ten-day clock include the discovery call?",
-    a: "No. The first 24 hours is your guaranteed reply. We then schedule a discovery session to align on scope and architecture. The ten-day sprint clock starts the morning after that session.",
+    q: "Does the 10-day timeline include our first meeting?",
+    a: "No. First, we have a strategy call to map out exactly what your business needs to succeed. Once we agree on that roadmap, the 10-day build window officially begins.",
   },
   {
-    q: "Can we add features after the initial sprint?",
-    a: "Yes. The ten-day sprint ships a launch-ready foundation. After go-live we transition into a steady-cadence relationship where additional features are scoped and shipped at a normal engineering pace.",
+    q: "Can we add more features after the initial launch?",
+    a: "Absolutely. The 10-day launch gives you a powerful, working foundation. Once you are live and gathering user feedback, we can continue partnering with you to add new features as your business grows.",
   },
   {
-    q: "How do you maintain quality on a ten-day timeline?",
-    a: "Discipline. We run a strict three-engagement cap, work with senior engineers only, and follow a sprint structure where every day has a defined deliverable. Speed is the byproduct of clarity, not corner-cutting.",
+    q: "How do you maintain high quality in just 10 days?",
+    a: "By focusing intensely on a few clients at a time. We only take on 3 projects max, so your business gets our undivided attention. You get daily updates and a clear roadmap, ensuring a premium product without cutting corners.",
   },
   {
-    q: "What does the engineering stack look like?",
-    a: "TypeScript across the stack — React or Next.js on the frontend, Node.js for the API layer, PostgreSQL for data, deployed on Vercel or AWS. Mobile builds use React Native and Expo. Choices are consistent so we move fast and you inherit a maintainable codebase.",
+    q: "Will my app be able to handle future growth?",
+    a: "Yes. We build your product using the same modern, enterprise-grade technology trusted by top companies. This ensures your app is fast, secure, and completely ready to scale as your customer base expands.",
   },
 ];

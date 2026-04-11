@@ -1,9 +1,4 @@
 import {
-  ShieldCheck,
-  Layers,
-  Gauge
-} from "lucide-react";
-import {
   Container,
   Section
 } from "../ui/Layout";

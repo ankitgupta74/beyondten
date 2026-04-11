@@ -23,9 +23,9 @@ export default function Testimonials() {
       <Container>
         <div ref={ref}>
           <SectionHeader
-            eyebrow="Engagements"
-            title="Trusted by founders who needed to ship."
-            description="A small sample of the operators we've shipped production software for."
+            eyebrow="Success Stories"
+            title="Trusted by founders who turned their ideas into reality."
+            description="Hear from business owners who bypassed the technical hurdles and launched their platforms in record time."
           />
 
           <div className="grid lg:grid-cols-2 gap-6">

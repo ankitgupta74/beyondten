@@ -4,45 +4,45 @@ export const WHATSAPP_URL =
 export const HERO_BADGE = "Now accepting Q2 engagements";
 
 export const HERO_TITLE = {
-  prefix: "Engineering velocity for",
-  highlight: "ambitious",
-  suffix: "product teams.",
+  prefix: "Turn your",
+  highlight: "idea",
+  suffix: "into a launched product.",
 };
 
 export const HERO_DESCRIPTION =
-  "beyondten is an engineering studio that builds production-grade web and mobile software for founders and operators. Senior craftsmanship, architectural rigor, and a sprint cadence that ships your MVP in ten working days.";
+  "We transform your vision into a fully functioning, reliable web or mobile app in just 10 days. Skip the technical headaches, impress your investors, and start attracting users faster with a product built for your business growth.";
 
 export const HERO_STATS = [
   {
-    label: "Delivery window",
+    label: "Time to market",
     value: "10",
     unit: "working days",
   },
   {
-    label: "Initial response",
+    label: "Response time",
     value: "< 24",
     unit: "hours",
   },
   {
-    label: "Build cadence",
+    label: "Project updates",
     value: "Daily",
-    unit: "deliverables",
+    unit: "communication",
   },
   {
-    label: "Concurrent slots",
+    label: "Dedicated focus",
     value: "3",
-    unit: "max active",
+    unit: "clients max",
   },
 ];
 
 export const HERO_TRUST = [
   {
-    label: "SLA",
+    label: "SUPPORT",
     text: "24-hour reply guarantee",
   },
   {
-    label: "CAP",
-    text: "3 concurrent engagements",
+    label: "QUALITY",
+    text: "Only 3 clients at a time",
   },
 ];
 

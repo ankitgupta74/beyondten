@@ -31,9 +31,9 @@ export default function Process() {
       <Container>
         <div ref={ref}>
           <SectionHeader
-            eyebrow="Process"
-            title="A ten-day delivery cadence built on engineering discipline."
-            description="Speed without process is chaos. Our sprint is engineered for predictability — daily checkpoints, tagged deliverables, and a working build at every stage."
+            eyebrow="The 10-Day Journey"
+            title="From idea to live product with zero guesswork."
+            description="We eliminated the endless delays and confusing tech jargon. You get clear daily updates, tangible milestones you can see, and a reliable product launched on time."
           />
 
           {/* Discovery card — sits above the timeline */}

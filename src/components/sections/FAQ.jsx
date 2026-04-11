@@ -24,7 +24,7 @@ export default function FAQ() {
             <SectionHeader
               eyebrow="FAQ"
               title="Answers, before you ask."
-              description="The questions we hear most often from founders evaluating an engagement."
+              description="Clear answers to the questions we hear most often from founders ready to launch their product."
               maxWidth="100%"
             />
           </div>

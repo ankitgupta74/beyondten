@@ -16,7 +16,7 @@ export default function Footer() {
               beyondten
             </span>
             <span className="hidden md:inline-flex bt-mono text-[10px] uppercase tracking-[0.12em] text-white/40 border-l border-white/10 pl-2.5 ml-1">
-              Engineering Studio
+              Your Launch Partner
             </span>
           </div>
 

@@ -71,7 +71,7 @@ export default function Navbar({ onSectionChange }) {
               beyondten
             </span>
             <span className="hidden md:inline-flex bt-mono text-[10px] uppercase tracking-[0.12em] text-(--bt-ink-500) border-l border-(--bt-border-subtle) pl-2.5 ml-1">
-              Engineering Studio
+              Your Launch Partner
             </span>
           </a>
 
@@ -126,7 +126,7 @@ export default function Navbar({ onSectionChange }) {
               size="sm"
               iconRight={<ArrowUpRight className="w-3.5 h-3.5" />}
             >
-              Start a project
+              Start Your Launch
             </Button>
           </div>
         </div>
