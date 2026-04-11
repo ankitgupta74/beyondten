@@ -1,23 +1,23 @@
 export const NAV_LINKS = [
   {
     id: "capabilities",
-    label: "Capabilities"
+    label: "Solutions",
   },
   {
     id: "process",
-    label: "Process"
+    label: "How it Works",
   },
   {
     id: "work",
-    label: "Work"
+    label: "Live Products",
   },
   {
     id: "engagement",
-    label: "Engagement"
+    label: "Success Stories",
   },
   {
     id: "faq",
-    label: "FAQ"
+    label: "FAQ",
   },
 ];
 
