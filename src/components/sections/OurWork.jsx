@@ -4,50 +4,10 @@ import {
   useRef
 } from "react";
 import { ArrowUpRight } from "lucide-react";
-
-// --- Live Projects Data ---
-const liveProjects = [
-  {
-    id: "libra-os",
-    title: "LibraOS",
-    category: "Web App",
-    description:
-      "An all-in-one SaaS dashboard for library owners — seat tracking, fee collection, and automated alerts.",
-    image: "/LibraOS.png", // Your uploaded screenshot
-    link: "https://libra-os-landing.vercel.app/",
-    accentColor: "blue",
-  },
-  {
-    id: "dotnovexure",
-    title: "dotnovexure",
-    category: "Website",
-    description:
-      "A sharp, professional website built to capture leads from the moment it went live.",
-    image: "/dotnovexure.png", // Shows the premium typographic placeholder
-    link: "https://dotnovexure.vercel.app/",
-    accentColor: "violet",
-  },
-];
-
-// --- Premium Accent Styling Map ---
-const accentMap = {
-  blue: {
-    pill: "bg-blue-50 text-blue-600",
-    dot: "bg-blue-600",
-    hover: "group-hover:text-blue-600",
-    glow: "hover:shadow-[0_12px_40px_-4px_rgba(59,130,246,0.12)]",
-    placeholder: "from-blue-50 to-slate-50",
-    placeholderText: "text-blue-300",
-  },
-  violet: {
-    pill: "bg-violet-50 text-violet-600",
-    dot: "bg-violet-600",
-    hover: "group-hover:text-violet-600",
-    glow: "hover:shadow-[0_12px_40px_-4px_rgba(139,92,246,0.12)]",
-    placeholder: "from-violet-50 to-slate-50",
-    placeholderText: "text-violet-300",
-  },
-};
+import {
+  LIVE_PROJECTS,
+  ACCENT_MAP
+} from "../../data/ourWorkData";
 
 export default function OurWork() {
   const [isVisible, setIsVisible] = useState(false);
@@ -120,8 +80,8 @@ export default function OurWork() {
 
         {/* Vertical Project Cards */}
         <div className="flex flex-col gap-6">
-          {liveProjects.map((project, index) => {
-            const accent = accentMap[project.accentColor];
+          {LIVE_PROJECTS.map((project, index) => {
+            const accent = ACCENT_MAP[project.accentColor];
             const CardWrapper = project.link ? "a" : "div";
             const linkProps = project.link
               ? {

@@ -13,39 +13,15 @@ import {
   Section,
   Eyebrow
 } from "../ui/Layout";
+import {
+  WHATSAPP_URL,
+  EMAIL_URL,
+  CHANNELS,
+  SOCIAL_LINKS,
+} from "../../data/contactData";
 import Button from "../ui/Button";
 import Badge from "../ui/Badge";
 import { useReveal } from "../../hooks/useReveal";
-
-const WHATSAPP_URL =
-  "https://wa.me/917980669925?text=Hi%20beyondten%2C%20I'd%20like%20to%20discuss%20a%20project.";
-
-const EMAIL_URL =
-  "mailto:team@beyondten.in?subject=Project%20Inquiry&body=Hi%20beyondten%2C%0D%0A%0D%0AI'd%20like%20to%20scope%20a%20project.%20Here's%20a%20quick%20summary%3A%0D%0A%0D%0A[Describe%20your%20idea]%0D%0A%0D%0AThanks.";
-
-const CHANNELS = [
-  {
-    code: "CH-01",
-    label: "Direct Email",
-    value: "team@beyondten.in",
-    href: EMAIL_URL,
-    icon: Mail,
-  },
-  {
-    code: "CH-02",
-    label: "WhatsApp",
-    value: "+91 79806 69925",
-    href: WHATSAPP_URL,
-    icon: MessageCircle,
-  },
-  {
-    code: "CH-03",
-    label: "Voice",
-    value: "+91 79806 69925",
-    href: "tel:+917980669925",
-    icon: Phone,
-  },
-];
 
 export default function Contact() {
   const { ref, isVisible } = useReveal();
@@ -86,7 +62,10 @@ export default function Contact() {
             <h2
               className={`bt-display-1 text-white mt-7 max-w-[16ch] transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]
                 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
-              style={{ transitionDelay: "120ms", color: "white" }}
+              style={{
+                transitionDelay: "120ms",
+                color: "white",
+              }}
             >
               Ship the next ten days
               <span className="text-(--bt-accent-400)"> with us.</span>
@@ -213,7 +192,7 @@ export default function Contact() {
                 </span>
                 <div className="flex items-center gap-3">
                   <a
-                    href="https://ig.me/m/beyondten.in"
+                    href={SOCIAL_LINKS[0].href}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-8 h-8 flex items-center justify-center rounded-(--bt-radius-xs) border border-white/10 text-white/60 hover:text-white hover:border-white/30 transition-colors"
@@ -222,7 +201,7 @@ export default function Contact() {
                     <FaInstagram className="w-3.5 h-3.5" />
                   </a>
                   <a
-                    href="https://linkedin.com/company/beyondten"
+                    href={SOCIAL_LINKS[1].href}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-8 h-8 flex items-center justify-center rounded-(--bt-radius-xs) border border-white/10 text-white/60 hover:text-white hover:border-white/30 transition-colors"

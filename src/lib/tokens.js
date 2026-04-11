@@ -32,8 +32,14 @@ export const tokens = {
       strong: "#c6cad1",
       focus:  "#059669",
     },
-    success: { 500: "#24a148", 100: "#defbe6" },
-    warning: { 500: "#f1c21b", 100: "#fcf4d6" },
+    success: {
+      500: "#24a148",
+      100: "#defbe6"
+    },
+    warning: {
+      500: "#f1c21b",
+      100: "#fcf4d6"
+    },
   },
   motion: {
     easeOut: "cubic-bezier(0.16, 1, 0.3, 1)",

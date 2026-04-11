@@ -14,12 +14,12 @@ export default function WhatWeBuild() {
   const sectionRef = useRef(null);
 
   useEffect(() => {
-    // 1. SCROLL DETECTION
+    // SCROLL DETECTION
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
           setIsVisible(true);
-          observer.disconnect(); // Only play once on scroll
+          observer.disconnect(); 
         }
       },
       { rootMargin: "-10% 0px -10% 0px" },
@@ -29,7 +29,7 @@ export default function WhatWeBuild() {
       observer.observe(sectionRef.current);
     }
 
-    // 2. NAV-LINK / REFRESH DETECTION (The "Reset-Then-Play" trick)
+    // NAV-LINK / REFRESH DETECTION (The "Reset-Then-Play" trick)
     const handleHashChange = () => {
       if (window.location.hash === "#what-we-build") {
         setIsVisible(false);

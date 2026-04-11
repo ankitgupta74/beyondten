@@ -5,32 +5,7 @@ import {
 import Button from "./ui/Button";
 import { Container } from "./ui/Layout";
 import { ArrowUpRight } from "lucide-react";
-
-const NAV_LINKS = [
-  {
-    id: "capabilities",
-    label: "Capabilities"
-  },
-  {
-    id: "process",
-    label: "Process"
-  },
-  {
-    id: "work",
-    label: "Work"
-  },
-  {
-    id: "engagement",
-    label: "Engagement"
-  },
-  {
-    id: "faq",
-    label: "FAQ"
-  },
-];
-
-const WHATSAPP_URL =
-  "https://wa.me/917980669925?text=Hi%20beyondten%2C%20I'd%20like%20to%20discuss%20a%20project.";
+import { NAV_LINKS, WHATSAPP_URL } from "../data/navData";
 
 export default function Navbar({ onSectionChange }) {
   const [activeSection, setActiveSection] = useState("hero");

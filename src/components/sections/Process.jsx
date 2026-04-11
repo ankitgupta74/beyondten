@@ -13,68 +13,14 @@ import {
   useReveal,
   staggerDelay
 } from "../../hooks/useReveal";
-
-const PHASES = [
-  {
-    code: "P-00",
-    name: "Discovery",
-    duration: "Pre-sprint",
-    body: "A planning session to align on scope, success criteria, and the architectural shape of the build. We translate your idea into an engineering brief.",
-  },
-];
-
-const TIMELINE = [
-  {
-    day: "01",
-    range: "Day 1",
-    title: "Design system & brand foundation",
-    desc: "Color, typography, components, and tokens locked into a shared design library.",
-    deliverable: "Design System",
-  },
-  {
-    day: "02",
-    range: "Day 2",
-    title: "Live landing surface",
-    desc: "Public-facing landing page deploys to a real URL and evolves with the product.",
-    deliverable: "Landing Page",
-  },
-  {
-    day: "03",
-    range: "Day 3",
-    title: "Information architecture",
-    desc: "Sitemap, user flows, and screen inventory documented and approved.",
-    deliverable: "Sitemap",
-  },
-  {
-    day: "04",
-    range: "Day 4",
-    title: "Data architecture",
-    desc: "Database schema designed, deployed, and seeded. Migrations versioned from day one.",
-  },
-  {
-    day: "05–06",
-    range: "Days 5–6",
-    title: "Backend & API layer",
-    desc: "Authentication, business logic, and API endpoints. The engine under the hood.",
-  },
-  {
-    day: "07–09",
-    range: "Days 7–9",
-    title: "Frontend implementation",
-    desc: "All screens built, wired to the API, and refined to production quality.",
-  },
-  {
-    day: "10",
-    range: "Day 10",
-    title: "Production deployment",
-    desc: "Final QA, deployment to production, monitoring setup, and handover. The product ships.",
-    deliverable: "Live Product",
-    isLast: true,
-  },
-];
+import {
+  PHASES,
+  TIMELINE
+} from "../../data/processData";
 
 export default function Process() {
   const { ref, isVisible } = useReveal();
+  const phase = PHASES[0];
 
   return (
     <Section
@@ -102,15 +48,14 @@ export default function Process() {
                   strokeWidth={1.75}
                 />
               </div>
-              <Badge variant="accent">PHASE-00</Badge>
+              <Badge variant="accent">{phase.code}</Badge>
             </div>
             <div>
               <h3 className="text-lg font-semibold text-(--bt-ink-900) mb-1">
-                Discovery & engineering brief
+                {phase.name} & engineering brief
               </h3>
               <p className="text-[0.875rem] text-(--bt-ink-600)">
-                A scoping session to translate your idea into an architectural
-                plan. Sprint clock starts the morning after.
+                {phase.body}
               </p>
             </div>
             <div className="md:text-right">
@@ -118,7 +63,7 @@ export default function Process() {
                 Duration
               </div>
               <div className="text-[0.9375rem] font-medium text-(--bt-ink-900)">
-                Pre-sprint
+                {phase.duration}
               </div>
             </div>
           </div>

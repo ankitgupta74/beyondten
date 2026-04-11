@@ -1,33 +1,17 @@
-import { useState, useEffect, useRef } from "react";
-import { Calendar, Clock, AlertCircle } from "lucide-react";
-
-// --- Ongoing Projects Configuration ---
-const currentProjects = [
-  {
-    id: 1,
-    title: "SaaS Dashboard",
-    type: "Web App",
-    startDate: "Oct 12",
-    endDate: "Oct 22",
-  },
-  {
-    id: 2,
-    title: "E-Commerce Mobile App",
-    type: "Mobile App",
-    startDate: "Oct 14",
-    endDate: "Oct 24",
-  },
-  {
-    id: 3,
-    title: "Internal Tool MVP",
-    type: "Web App",
-    startDate: "Oct 15",
-    endDate: "Oct 25",
-  },
-];
-
-// Update this date to tell clients when you can take the next project
-const nextAvailableDate = "October 26th";
+import {
+  useState,
+  useEffect,
+  useRef
+} from "react";
+import {
+  Calendar,
+  Clock,
+  AlertCircle
+} from "lucide-react";
+import {
+  CURRENT_PROJECTS,
+  NEXT_AVAILABLE_DATE
+} from "../../data/onGoingData";
 
 export default function OnGoing() {
   const [isVisible, setIsVisible] = useState(false);
@@ -51,7 +35,7 @@ export default function OnGoing() {
     return () => observer.disconnect();
   }, []);
 
-  const isFull = currentProjects.length >= 3;
+  const isFull = CURRENT_PROJECTS.length >= 3;
 
   return (
     <section
@@ -86,7 +70,7 @@ export default function OnGoing() {
         {/* Project Slots Container */}
         <div className="flex flex-col gap-4 mb-10">
           {[1, 2, 3].map((slot, index) => {
-            const project = currentProjects[index];
+            const project = CURRENT_PROJECTS[index];
             const delayClass =
               index === 0
                 ? "delay-150"
@@ -163,7 +147,7 @@ export default function OnGoing() {
                 We are not taking new projects right now. Our next available
                 slot opens on{" "}
                 <span className="font-bold text-amber-900">
-                  {nextAvailableDate}
+                  {NEXT_AVAILABLE_DATE}
                 </span>
                 .
               </p>
@@ -177,8 +161,8 @@ export default function OnGoing() {
                 Slots are open!
               </h4>
               <p className="text-blue-700/80 font-medium">
-                We have room for {3 - currentProjects.length} more project
-                {3 - currentProjects.length > 1 ? "s" : ""} in our current
+                We have room for {3 - CURRENT_PROJECTS.length} more project
+                {3 - CURRENT_PROJECTS.length > 1 ? "s" : ""} in our current
                 sprint.
               </p>
             </div>

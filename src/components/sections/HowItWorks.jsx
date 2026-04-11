@@ -7,52 +7,10 @@ import {
   ChevronDown,
   Package
 } from "lucide-react";
-
-const timeline = [
-  {
-    day: "Day 1",
-    label: "Design System & Brand Guidelines",
-    desc: "Colors, typography, components — your visual identity locked in.",
-    deliverable: true,
-  },
-  {
-    day: "Day 2",
-    label: "Live Landing Page",
-    desc: "A real, public-facing landing page goes live. It evolves with the project.",
-    deliverable: true,
-  },
-  {
-    day: "Day 3",
-    label: "Sitemap",
-    desc: "Every page and flow mapped out. No surprises later.",
-    deliverable: true,
-  },
-  {
-    day: "Day 4",
-    label: "Database Setup",
-    desc: "Schema designed and deployed. Your data architecture, done right.",
-    deliverable: false,
-  },
-  {
-    day: "Days 5–6",
-    label: "Backend",
-    desc: "APIs, auth, business logic — the engine under the hood.",
-    deliverable: false,
-  },
-  {
-    day: "Days 7–9",
-    label: "Frontend",
-    desc: "All screens built and wired to the backend. Pixel-perfect.",
-    deliverable: false,
-  },
-  {
-    day: "Day 10",
-    label: "Go Live",
-    desc: "Your product ships to real users. Done.",
-    deliverable: true,
-    isLast: true,
-  },
-];
+import {
+  TIMELINE,
+  DELIVERABLES
+} from "../../data/howItWorksData";
 
 export default function HowItWorks() {
   const [isVisible, setIsVisible] = useState(false);
@@ -223,7 +181,7 @@ export default function HowItWorks() {
                     <div className="absolute left-4.75 top-2 bottom-2 w-px bg-gray-100" />
 
                     <div className="flex flex-col gap-0">
-                      {timeline.map((item, i) => (
+                      {TIMELINE.map((item, i) => (
                         <div
                           key={i}
                           className="relative flex gap-5 pb-7 last:pb-0"
@@ -274,15 +232,7 @@ export default function HowItWorks() {
                       What you receive
                     </p>
                     <div className="grid grid-cols-2 gap-3">
-                      {[
-                        {
-                          day: "Day 1",
-                          item: "Design System + Brand Guidelines",
-                        },
-                        { day: "Day 2", item: "Landing Page" },
-                        { day: "Day 3", item: "Sitemap" },
-                        { day: "Day 10", item: "Complete Website" },
-                      ].map((d, i) => (
+                      {DELIVERABLES.map((d, i) => (
                         <div
                           key={i}
                           className="bg-gray-50 rounded-2xl p-4 border border-gray-100"
