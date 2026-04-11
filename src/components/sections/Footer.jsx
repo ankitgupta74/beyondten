@@ -1,19 +1,14 @@
-// src/components/sections/Footer.jsx
-// ─────────────────────────────────────────────────────────────
-// Slim legal footer. Lives below the dark Contact section.
-// ─────────────────────────────────────────────────────────────
-
 import { Container } from "../ui/Layout";
 
 export default function Footer() {
   return (
-    <footer className="bg-[var(--bt-ink-900)] border-t border-white/10 py-8">
+    <footer className="bg-(--bt-ink-900) border-t border-white/10 py-8">
       <Container>
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           {/* Brand */}
           <div className="flex items-center gap-2.5">
-            <div className="relative w-6 h-6 flex items-center justify-center bg-white rounded-[2px]">
-              <span className="bt-mono text-[var(--bt-ink-900)] text-[10px] font-semibold tracking-tighter">
+            <div className="relative w-6 h-6 flex items-center justify-center bg-white rounded-xs">
+              <span className="bt-mono text-(--bt-ink-900) text-[10px] font-semibold tracking-tighter">
                 10
               </span>
             </div>

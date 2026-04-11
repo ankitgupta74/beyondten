@@ -1,11 +1,8 @@
-// src/hooks/useReveal.js
-// ─────────────────────────────────────────────────────────────
-// Centralized scroll-reveal hook. Replaces the duplicated
-// IntersectionObserver logic that was in every section.
-// Returns a ref + a className helper.
-// ─────────────────────────────────────────────────────────────
-
-import { useEffect, useRef, useState } from "react";
+import {
+  useEffect,
+  useRef,
+  useState
+} from "react";
 
 export function useReveal({ threshold = 0.15, once = true } = {}) {
   const ref = useRef(null);
@@ -34,5 +31,4 @@ export function useReveal({ threshold = 0.15, once = true } = {}) {
   return { ref, isVisible };
 }
 
-// Stagger helper — delays for child reveals
 export const staggerDelay = (index, base = 80) => `${index * base}ms`;

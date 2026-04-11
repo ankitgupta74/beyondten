@@ -1,10 +1,3 @@
-// src/App.jsx
-// ─────────────────────────────────────────────────────────────
-// Root composition. Order:
-//   Hero → TrustBar → Capabilities → Process → Work →
-//   Testimonials → FAQ → Contact → Footer
-// ─────────────────────────────────────────────────────────────
-
 import { useState } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/sections/Hero";
@@ -23,7 +16,7 @@ export default function App() {
   usePageSEO(activeSection);
 
   return (
-    <div className="font-sans antialiased bg-[var(--bt-surface-page)] text-[var(--bt-ink-900)]">
+    <div className="font-sans antialiased bg-(--bt-surface-page) text-(--bt-ink-900)">
       <Navbar onSectionChange={setActiveSection} />
       <Hero />
       <TrustBar />

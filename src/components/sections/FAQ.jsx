@@ -1,12 +1,14 @@
-// src/components/sections/FAQ.jsx
-// ─────────────────────────────────────────────────────────────
-// FAQ accordion in the new design system.
-// ─────────────────────────────────────────────────────────────
-
 import { useState } from "react";
 import { Plus } from "lucide-react";
-import { Container, Section, SectionHeader } from "../ui/Layout";
-import { useReveal, staggerDelay } from "../../hooks/useReveal";
+import {
+  Container,
+  Section,
+  SectionHeader
+} from "../ui/Layout";
+import {
+  useReveal,
+  staggerDelay
+} from "../../hooks/useReveal";
 
 const FAQS = [
   {
@@ -55,13 +57,13 @@ export default function FAQ() {
 
           {/* Right column — accordion */}
           <div className="lg:col-span-8">
-            <div className="border-t border-[var(--bt-border-subtle)]">
+            <div className="border-t border-(--bt-border-subtle)">
               {FAQS.map((faq, i) => {
                 const isOpen = openIndex === i;
                 return (
                   <div
                     key={i}
-                    className={`border-b border-[var(--bt-border-subtle)] transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]
+                    className={`border-b border-(--bt-border-subtle) transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]
                       ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"}`}
                     style={{ transitionDelay: staggerDelay(i, 60) }}
                   >
@@ -71,18 +73,20 @@ export default function FAQ() {
                       aria-expanded={isOpen}
                     >
                       <div className="flex items-start gap-5">
-                        <span className="bt-mono text-[10px] uppercase tracking-[0.14em] text-[var(--bt-ink-400)] mt-1.5 tabular-nums">
+                        <span className="bt-mono text-[10px] uppercase tracking-[0.14em] text-(--bt-ink-400) mt-1.5 tabular-nums">
                           {String(i + 1).padStart(2, "0")}
                         </span>
-                        <h3 className="text-[1.0625rem] font-semibold text-[var(--bt-ink-900)] leading-snug pr-4">
+                        <h3 className="text-[1.0625rem] font-semibold text-(--bt-ink-900) leading-snug pr-4">
                           {faq.q}
                         </h3>
                       </div>
                       <div
-                        className={`shrink-0 mt-1 w-7 h-7 flex items-center justify-center rounded-[var(--bt-radius-xs)] border border-[var(--bt-border-subtle)] transition-all duration-500
-                          ${isOpen
-                            ? "bg-[var(--bt-ink-900)] border-[var(--bt-ink-900)] text-white rotate-45"
-                            : "bg-white text-[var(--bt-ink-500)] group-hover:border-[var(--bt-ink-900)] group-hover:text-[var(--bt-ink-900)]"}
+                        className={`shrink-0 mt-1 w-7 h-7 flex items-center justify-center rounded-(--bt-radius-xs) border border-(--bt-border-subtle) transition-all duration-500
+                          ${
+                            isOpen
+                              ? "bg-(--bt-ink-900) border-(--bt-ink-900) text-white rotate-45"
+                              : "bg-white text-(--bt-ink-500) group-hover:border-(--bt-ink-900) group-hover:text-(--bt-ink-900)"
+                          }
                         `}
                       >
                         <Plus className="w-3.5 h-3.5" strokeWidth={2.5} />
@@ -95,7 +99,7 @@ export default function FAQ() {
                     >
                       <div className="overflow-hidden">
                         <div className="pl-12 pr-12 pb-6 -mt-1">
-                          <p className="text-[0.9375rem] text-[var(--bt-ink-600)] leading-relaxed max-w-[60ch]">
+                          <p className="text-[0.9375rem] text-(--bt-ink-600) leading-relaxed max-w-[60ch]">
                             {faq.a}
                           </p>
                         </div>

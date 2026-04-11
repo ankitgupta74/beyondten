@@ -2,7 +2,6 @@ import { useState, useEffect, useRef } from "react";
 import { Calendar, Clock, AlertCircle } from "lucide-react";
 
 // --- Ongoing Projects Configuration ---
-// Add up to 3 projects here. If you have fewer than 3, the remaining slots will show as "Available".
 const currentProjects = [
   {
     id: 1,

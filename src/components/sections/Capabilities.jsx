@@ -1,15 +1,20 @@
-// src/components/sections/Capabilities.jsx
-// ─────────────────────────────────────────────────────────────
-// Capabilities matrix. Two primary engagements (web platform
-// and mobile MVP) presented as enterprise capability cards
-// with deliverable lists.
-// ─────────────────────────────────────────────────────────────
-
-import { ArrowUpRight, Globe, Smartphone, Check } from "lucide-react";
-import { Container, Section, SectionHeader } from "../ui/Layout";
+import {
+  ArrowUpRight,
+  Globe,
+  Smartphone,
+  Check
+} from "lucide-react";
+import {
+  Container,
+  Section,
+  SectionHeader
+} from "../ui/Layout";
 import Button from "../ui/Button";
 import Badge from "../ui/Badge";
-import { useReveal, staggerDelay } from "../../hooks/useReveal";
+import {
+  useReveal,
+  staggerDelay
+} from "../../hooks/useReveal";
 
 const CAPABILITIES = [
   {
@@ -74,11 +79,11 @@ export default function Capabilities() {
                   style={{ transitionDelay: staggerDelay(i, 150) }}
                 >
                   {/* Header */}
-                  <header className="flex items-start justify-between gap-4 mb-8 pb-8 border-b border-[var(--bt-border-subtle)]">
+                  <header className="flex items-start justify-between gap-4 mb-8 pb-8 border-b border-(--bt-border-subtle)">
                     <div className="flex items-start gap-4">
-                      <div className="w-11 h-11 flex items-center justify-center border border-[var(--bt-border-subtle)] rounded-[var(--bt-radius-sm)] bg-[var(--bt-surface-sunken)]">
+                      <div className="w-11 h-11 flex items-center justify-center border border-(--bt-border-subtle) rounded-(--bt-radius-sm) bg-(--bt-surface-sunken)">
                         <Icon
-                          className="w-5 h-5 text-[var(--bt-accent-600)]"
+                          className="w-5 h-5 text-(--bt-accent-600)"
                           strokeWidth={1.75}
                         />
                       </div>
@@ -86,10 +91,10 @@ export default function Capabilities() {
                         <Badge variant="outline" className="mb-2">
                           {cap.code}
                         </Badge>
-                        <h3 className="text-2xl font-semibold tracking-tight text-[var(--bt-ink-900)]">
+                        <h3 className="text-2xl font-semibold tracking-tight text-(--bt-ink-900)">
                           {cap.title}
                         </h3>
-                        <p className="text-[0.875rem] text-[var(--bt-ink-500)] mt-1">
+                        <p className="text-[0.875rem] text-(--bt-ink-500) mt-1">
                           {cap.subtitle}
                         </p>
                       </div>
@@ -97,23 +102,23 @@ export default function Capabilities() {
                   </header>
 
                   {/* Description */}
-                  <p className="text-[0.9375rem] text-[var(--bt-ink-600)] leading-relaxed mb-8">
+                  <p className="text-[0.9375rem] text-(--bt-ink-600) leading-relaxed mb-8">
                     {cap.description}
                   </p>
 
                   {/* Deliverables */}
                   <div className="mb-8">
-                    <div className="bt-mono text-[10px] uppercase tracking-[0.14em] text-[var(--bt-ink-500)] mb-4">
+                    <div className="bt-mono text-[10px] uppercase tracking-[0.14em] text-(--bt-ink-500) mb-4">
                       Included deliverables
                     </div>
                     <ul className="grid sm:grid-cols-2 gap-x-4 gap-y-3">
                       {cap.deliverables.map((d, j) => (
                         <li
                           key={j}
-                          className="flex items-start gap-2.5 text-[0.875rem] text-[var(--bt-ink-700)]"
+                          className="flex items-start gap-2.5 text-[0.875rem] text-(--bt-ink-700)"
                         >
                           <Check
-                            className="w-4 h-4 text-[var(--bt-accent-600)] mt-0.5 shrink-0"
+                            className="w-4 h-4 text-(--bt-accent-600) mt-0.5 shrink-0"
                             strokeWidth={2.5}
                           />
                           <span>{d}</span>
@@ -123,7 +128,7 @@ export default function Capabilities() {
                   </div>
 
                   {/* CTA */}
-                  <div className="mt-auto pt-6 border-t border-[var(--bt-border-subtle)]">
+                  <div className="mt-auto pt-6 border-t border-(--bt-border-subtle)">
                     <Button
                       href={cap.href}
                       target="_blank"

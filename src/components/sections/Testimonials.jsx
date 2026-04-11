@@ -1,12 +1,14 @@
-// src/components/sections/Testimonials.jsx
-// ─────────────────────────────────────────────────────────────
-// Client testimonials in enterprise editorial format.
-// ─────────────────────────────────────────────────────────────
-
 import { Quote } from "lucide-react";
-import { Container, Section, SectionHeader } from "../ui/Layout";
+import {
+  Container,
+  Section,
+  SectionHeader
+} from "../ui/Layout";
 import Badge from "../ui/Badge";
-import { useReveal, staggerDelay } from "../../hooks/useReveal";
+import {
+  useReveal,
+  staggerDelay
+} from "../../hooks/useReveal";
 
 const TESTIMONIALS = [
   {
@@ -36,7 +38,7 @@ export default function Testimonials() {
     <Section
       id="engagement"
       tone="sunken"
-      className="border-y border-[var(--bt-border-subtle)]"
+      className="border-y border-(--bt-border-subtle)"
     >
       <Container>
         <div ref={ref}>
@@ -55,34 +57,34 @@ export default function Testimonials() {
                 style={{ transitionDelay: staggerDelay(i, 150) }}
               >
                 {/* Top row */}
-                <div className="flex items-center justify-between mb-8 pb-6 border-b border-[var(--bt-border-subtle)]">
+                <div className="flex items-center justify-between mb-8 pb-6 border-b border-(--bt-border-subtle)">
                   <Badge variant="outline">{t.code}</Badge>
                   <Quote
-                    className="w-5 h-5 text-[var(--bt-accent-500)]"
+                    className="w-5 h-5 text-(--bt-accent-500)"
                     strokeWidth={1.5}
                   />
                 </div>
 
                 {/* Quote */}
                 <blockquote className="flex-1">
-                  <h3 className="text-xl lg:text-2xl font-semibold tracking-tight text-[var(--bt-ink-900)] leading-snug mb-5">
+                  <h3 className="text-xl lg:text-2xl font-semibold tracking-tight text-(--bt-ink-900) leading-snug mb-5">
                     {t.headline}
                   </h3>
-                  <p className="text-[0.9375rem] text-[var(--bt-ink-600)] leading-relaxed">
+                  <p className="text-[0.9375rem] text-(--bt-ink-600) leading-relaxed">
                     {t.quote}
                   </p>
                 </blockquote>
 
                 {/* Author */}
-                <figcaption className="mt-8 pt-6 border-t border-[var(--bt-border-subtle)] flex items-center gap-4">
-                  <div className="w-11 h-11 rounded-[var(--bt-radius-sm)] border border-[var(--bt-border-subtle)] bg-[var(--bt-accent-50)] text-[var(--bt-accent-700)] font-semibold flex items-center justify-center">
+                <figcaption className="mt-8 pt-6 border-t border-(--bt-border-subtle) flex items-center gap-4">
+                  <div className="w-11 h-11 rounded-(--bt-radius-sm) border border-(--bt-border-subtle) bg-(--bt-accent-50) text-(--bt-accent-700) font-semibold flex items-center justify-center">
                     {t.initial}
                   </div>
                   <div>
-                    <div className="text-[0.9375rem] font-semibold text-[var(--bt-ink-900)]">
+                    <div className="text-[0.9375rem] font-semibold text-(--bt-ink-900)">
                       {t.author}
                     </div>
-                    <div className="text-[0.8125rem] text-[var(--bt-ink-500)]">
+                    <div className="text-[0.8125rem] text-(--bt-ink-500)">
                       {t.role}
                     </div>
                   </div>

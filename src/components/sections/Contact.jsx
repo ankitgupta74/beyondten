@@ -1,13 +1,18 @@
-// src/components/sections/Contact.jsx
-// ─────────────────────────────────────────────────────────────
-// Final contact CTA — dark inverse section with the same
-// architectural feel as the rest of the site. Houses all
-// contact channels.
-// ─────────────────────────────────────────────────────────────
-
-import { ArrowUpRight, Mail, MessageCircle, Phone } from "lucide-react";
-import { FaInstagram, FaLinkedinIn } from "react-icons/fa6";
-import { Container, Section, Eyebrow } from "../ui/Layout";
+import {
+  ArrowUpRight,
+  Mail,
+  MessageCircle,
+  Phone
+} from "lucide-react";
+import {
+  FaInstagram,
+  FaLinkedinIn
+} from "react-icons/fa6";
+import {
+  Container,
+  Section,
+  Eyebrow
+} from "../ui/Layout";
 import Button from "../ui/Button";
 import Badge from "../ui/Badge";
 import { useReveal } from "../../hooks/useReveal";
@@ -49,12 +54,12 @@ export default function Contact() {
     <Section
       id="contact"
       tone="inverse"
-      className="!py-24 lg:!py-32 overflow-hidden relative"
+      className="py-24! lg:py-32! overflow-hidden relative"
     >
       {/* Architectural grid background */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 opacity-[0.06] [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_75%)]"
+        className="absolute inset-0 opacity-[0.06] [radial-gradient(ellipse_at_center,black_30%,transparent_75%)]"
         style={{
           backgroundImage:
             "linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)",
@@ -64,7 +69,7 @@ export default function Contact() {
       {/* Soft accent glow */}
       <div
         aria-hidden="true"
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[var(--bt-accent-700)] rounded-full blur-[140px] opacity-30 pointer-events-none"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-200 h-200 bg-(--bt-accent-700) rounded-full blur-[140px] opacity-30 pointer-events-none"
       />
 
       <Container className="relative">
@@ -84,13 +89,16 @@ export default function Contact() {
               style={{ transitionDelay: "120ms", color: "white" }}
             >
               Ship the next ten days
-              <span className="text-[var(--bt-accent-400)]"> with us.</span>
+              <span className="text-(--bt-accent-400)"> with us.</span>
             </h2>
 
             <p
               className={`bt-lead mt-7 max-w-[58ch] transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]
                 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
-              style={{ transitionDelay: "240ms", color: "rgba(255,255,255,0.7)" }}
+              style={{
+                transitionDelay: "240ms",
+                color: "rgba(255,255,255,0.7)",
+              }}
             >
               Tell us what you're building. We'll reply within twenty-four
               hours, scope the engagement together, and start the sprint the
@@ -143,9 +151,9 @@ export default function Contact() {
               ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
             style={{ transitionDelay: "300ms" }}
           >
-            <div className="border border-white/10 rounded-[var(--bt-radius-lg)] overflow-hidden bg-white/[0.02] backdrop-blur-sm">
+            <div className="border border-white/10 rounded-(--bt-radius-lg) overflow-hidden bg-white/2 backdrop-blur-sm">
               {/* Header */}
-              <div className="px-6 py-3 border-b border-white/10 bg-white/[0.03] flex items-center justify-between">
+              <div className="px-6 py-3 border-b border-white/10 bg-white/3 flex items-center justify-between">
                 <span className="bt-mono text-[10px] uppercase tracking-[0.14em] text-white/50">
                   Direct Channels
                 </span>
@@ -162,11 +170,17 @@ export default function Contact() {
                     <li key={c.code}>
                       <a
                         href={c.href}
-                        target={c.href.startsWith("http") ? "_blank" : undefined}
-                        rel={c.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                        className="group flex items-center gap-5 px-6 py-5 hover:bg-white/[0.04] transition-colors"
+                        target={
+                          c.href.startsWith("http") ? "_blank" : undefined
+                        }
+                        rel={
+                          c.href.startsWith("http")
+                            ? "noopener noreferrer"
+                            : undefined
+                        }
+                        className="group flex items-center gap-5 px-6 py-5 hover:bg-white/4 transition-colors"
                       >
-                        <div className="w-10 h-10 flex items-center justify-center rounded-[var(--bt-radius-sm)] border border-white/10 bg-white/[0.04] text-white/70 group-hover:text-white group-hover:border-white/30 transition-colors">
+                        <div className="w-10 h-10 flex items-center justify-center rounded-(--bt-radius-sm) border border-white/10 bg-white/4 text-white/70 group-hover:text-white group-hover:border-white/30 transition-colors">
                           <Icon className="w-4 h-4" strokeWidth={1.75} />
                         </div>
                         <div className="flex-1 min-w-0">
@@ -193,7 +207,7 @@ export default function Contact() {
               </ul>
 
               {/* Social footer */}
-              <div className="px-6 py-4 border-t border-white/10 bg-white/[0.03] flex items-center justify-between">
+              <div className="px-6 py-4 border-t border-white/10 bg-white/3 flex items-center justify-between">
                 <span className="bt-mono text-[10px] uppercase tracking-[0.14em] text-white/40">
                   Follow
                 </span>
@@ -202,7 +216,7 @@ export default function Contact() {
                     href="https://ig.me/m/beyondten.in"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-8 h-8 flex items-center justify-center rounded-[var(--bt-radius-xs)] border border-white/10 text-white/60 hover:text-white hover:border-white/30 transition-colors"
+                    className="w-8 h-8 flex items-center justify-center rounded-(--bt-radius-xs) border border-white/10 text-white/60 hover:text-white hover:border-white/30 transition-colors"
                     aria-label="Instagram"
                   >
                     <FaInstagram className="w-3.5 h-3.5" />
@@ -211,7 +225,7 @@ export default function Contact() {
                     href="https://linkedin.com/company/beyondten"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-8 h-8 flex items-center justify-center rounded-[var(--bt-radius-xs)] border border-white/10 text-white/60 hover:text-white hover:border-white/30 transition-colors"
+                    className="w-8 h-8 flex items-center justify-center rounded-(--bt-radius-xs) border border-white/10 text-white/60 hover:text-white hover:border-white/30 transition-colors"
                     aria-label="LinkedIn"
                   >
                     <FaLinkedinIn className="w-3.5 h-3.5" />

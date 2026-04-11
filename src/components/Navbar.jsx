@@ -1,21 +1,32 @@
-// src/components/Navbar.jsx
-// ─────────────────────────────────────────────────────────────
-// Enterprise-grade navbar. Full-width, sticky, hairline border.
-// Tracks scroll for elevation. IntersectionObserver tracks
-// active section for nav highlighting + drives SEO hook.
-// ─────────────────────────────────────────────────────────────
-
-import { useEffect, useState } from "react";
+import {
+  useEffect,
+  useState
+} from "react";
 import Button from "./ui/Button";
 import { Container } from "./ui/Layout";
 import { ArrowUpRight } from "lucide-react";
 
 const NAV_LINKS = [
-  { id: "capabilities", label: "Capabilities" },
-  { id: "process",      label: "Process" },
-  { id: "work",         label: "Work" },
-  { id: "engagement",   label: "Engagement" },
-  { id: "faq",          label: "FAQ" },
+  {
+    id: "capabilities",
+    label: "Capabilities"
+  },
+  {
+    id: "process",
+    label: "Process"
+  },
+  {
+    id: "work",
+    label: "Work"
+  },
+  {
+    id: "engagement",
+    label: "Engagement"
+  },
+  {
+    id: "faq",
+    label: "FAQ"
+  },
 ];
 
 const WHATSAPP_URL =
@@ -58,11 +69,13 @@ export default function Navbar({ onSectionChange }) {
     <header
       className={`
         fixed top-0 inset-x-0 z-50
-        bg-[var(--bt-surface-page)]/85 backdrop-blur-xl
+        bg-(--bt-surface-page)/85 backdrop-blur-xl
         transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]
-        ${isScrolled
-          ? "border-b border-[var(--bt-border-subtle)]"
-          : "border-b border-transparent"}
+        ${
+          isScrolled
+            ? "border-b border-(--bt-border-subtle)"
+            : "border-b border-transparent"
+        }
       `}
     >
       <Container>
@@ -74,15 +87,15 @@ export default function Navbar({ onSectionChange }) {
             aria-label="beyondten — home"
           >
             <div className="relative w-7 h-7 flex items-center justify-center">
-              <div className="absolute inset-0 bg-[var(--bt-ink-900)] rounded-[2px]" />
+              <div className="absolute inset-0 bg-(--bt-ink-900) rounded-xs" />
               <span className="relative bt-mono text-white text-[11px] font-semibold tracking-tighter">
                 10
               </span>
             </div>
-            <span className="text-[1.0625rem] font-semibold tracking-[-0.02em] text-[var(--bt-ink-900)]">
+            <span className="text-[1.0625rem] font-semibold tracking-[-0.02em] text-(--bt-ink-900)">
               beyondten
             </span>
-            <span className="hidden md:inline-flex bt-mono text-[10px] uppercase tracking-[0.12em] text-[var(--bt-ink-500)] border-l border-[var(--bt-border-subtle)] pl-2.5 ml-1">
+            <span className="hidden md:inline-flex bt-mono text-[10px] uppercase tracking-[0.12em] text-(--bt-ink-500) border-l border-(--bt-border-subtle) pl-2.5 ml-1">
               Engineering Studio
             </span>
           </a>
@@ -101,16 +114,18 @@ export default function Navbar({ onSectionChange }) {
                   className={`
                     relative px-3.5 py-2 text-[0.875rem] font-medium
                     transition-colors duration-200
-                    ${isActive
-                      ? "text-[var(--bt-ink-900)]"
-                      : "text-[var(--bt-ink-500)] hover:text-[var(--bt-ink-900)]"}
+                    ${
+                      isActive
+                        ? "text-(--bt-ink-900)"
+                        : "text-(--bt-ink-500) hover:text-(--bt-ink-900)"
+                    }
                   `}
                 >
                   {link.label}
                   <span
                     className={`
-                      absolute left-3.5 right-3.5 -bottom-[1px] h-[2px]
-                      bg-[var(--bt-accent-500)]
+                      absolute left-3.5 right-3.5 -bottom-px h-0.5
+                      bg-(--bt-accent-500)
                       transition-transform duration-300 origin-left
                       ${isActive ? "scale-x-100" : "scale-x-0"}
                     `}
@@ -124,7 +139,7 @@ export default function Navbar({ onSectionChange }) {
           <div className="flex items-center gap-3">
             <a
               href="#contact"
-              className="hidden md:inline-flex text-[0.875rem] font-medium text-[var(--bt-ink-600)] hover:text-[var(--bt-ink-900)] transition-colors"
+              className="hidden md:inline-flex text-[0.875rem] font-medium text-(--bt-ink-600) hover:text-(--bt-ink-900) transition-colors"
             >
               Contact
             </a>

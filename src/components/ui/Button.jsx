@@ -1,10 +1,3 @@
-// src/components/ui/Button.jsx
-// ─────────────────────────────────────────────────────────────
-// Single Button primitive. All CTAs across the site use this.
-// Variants: primary | secondary | ghost | inverse
-// Sizes:    sm | md | lg
-// ─────────────────────────────────────────────────────────────
-
 const variants = {
   primary: `
     bg-[var(--bt-accent-500)] text-white border border-[var(--bt-accent-500)]

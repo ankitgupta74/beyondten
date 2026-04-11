@@ -1,15 +1,8 @@
 @import "tailwindcss";
 
-/* ============================================================
-   BEYONDTEN DESIGN SYSTEM
-   ------------------------------------------------------------
-   A single source of truth for the entire site.
-   Inspired by IBM Carbon + Salesforce Lightning + Stripe.
-   ============================================================ */
-
 @layer base {
   :root {
-    /* ─── COLOR TOKENS ─────────────────────────────────────── */
+    /* COLOR TOKENS */
 
     /* Brand — deep ink + enterprise blue */
     --bt-ink-900: #0a0e1a;
@@ -32,7 +25,7 @@
     /* Accent — Forest emerald */
     --bt-accent-700: #065f46;
     --bt-accent-600: #047857;
-    --bt-accent-500: #059669;   /* primary CTA */
+    --bt-accent-500: #059669;
     --bt-accent-400: #10b981;
     --bt-accent-300: #34d399;
     --bt-accent-100: #d1fae5;
@@ -51,7 +44,7 @@
     --bt-border-strong: #c6cad1;
     --bt-border-focus:  #059669;
 
-    /* ─── TYPOGRAPHY TOKENS ────────────────────────────────── */
+    /* TYPOGRAPHY TOKENS */
     --bt-font-display: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, sans-serif;
     --bt-font-body:    "IBM Plex Sans", -apple-system, BlinkMacSystemFont, sans-serif;
     --bt-font-mono:    "IBM Plex Mono", "SF Mono", Menlo, monospace;
@@ -80,7 +73,7 @@
     --bt-tracking-wide:     0.025em;
     --bt-tracking-wider:    0.08em;
 
-    /* ─── SPATIAL TOKENS ───────────────────────────────────── */
+    /* SPATIAL TOKENS */
     --bt-space-1:  0.25rem;
     --bt-space-2:  0.5rem;
     --bt-space-3:  0.75rem;
@@ -149,9 +142,7 @@
   }
 }
 
-/* ============================================================
-   COMPONENT UTILITIES
-   ============================================================ */
+/* COMPONENT UTILITIES */
 
 @layer components {
 

@@ -1,8 +1,3 @@
-// src/components/ui/Badge.jsx
-// ─────────────────────────────────────────────────────────────
-// Badge / pill primitive. Variants align with status colors.
-// ─────────────────────────────────────────────────────────────
-
 const variants = {
   neutral: "bg-[var(--bt-ink-100)] text-[var(--bt-ink-700)] border-[var(--bt-border-subtle)]",
   accent:  "bg-[var(--bt-accent-50)] text-[var(--bt-accent-700)] border-[var(--bt-accent-100)]",
@@ -25,7 +20,7 @@ export default function Badge({
       className={`
         inline-flex items-center gap-1.5 px-2.5 py-1
         text-[0.6875rem] font-medium uppercase tracking-[0.08em]
-        rounded-[var(--bt-radius-xs)] border bt-mono
+        rounded-(--bt-radius-xs) border bt-mono
         ${variants[variant]} ${className}
       `}
     >

@@ -10,12 +10,12 @@ export default function ClientReviews() {
   const sectionRef = useRef(null);
 
   useEffect(() => {
-    // 1. SCROLL DETECTION
+    // SCROLL DETECTION
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
           setIsVisible(true);
-          observer.disconnect(); // Only play once on natural scroll
+          observer.disconnect();
         }
       },
       { rootMargin: "-10% 0px -10% 0px" }, // Trigger just before entering the center

@@ -1,10 +1,3 @@
-// src/lib/tokens.js
-// ─────────────────────────────────────────────────────────────
-// Design tokens exposed to JS. Mirrors src/index.css.
-// Use this when you need a token value in a component prop
-// (e.g., chart colors). For styles, prefer CSS variables.
-// ─────────────────────────────────────────────────────────────
-
 export const tokens = {
   color: {
     ink: {

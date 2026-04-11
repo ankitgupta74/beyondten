@@ -1,10 +1,3 @@
-// src/hooks/usePageSEO.js
-// ─────────────────────────────────────────────────────────────
-// Dynamically updates <title> and meta description as the
-// user scrolls between sections. Section IDs match the new
-// enterprise structure.
-// ─────────────────────────────────────────────────────────────
-
 import { useEffect } from "react";
 
 const SEO_MAP = {

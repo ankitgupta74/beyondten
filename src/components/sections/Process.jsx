@@ -1,14 +1,18 @@
-// src/components/sections/Process.jsx
-// ─────────────────────────────────────────────────────────────
-// Engineering sprint timeline. Structured ten-day cadence
-// presented as a true delivery schedule, with daily checkpoints
-// and tagged deliverables.
-// ─────────────────────────────────────────────────────────────
-
-import { Package, GitCommit, Rocket } from "lucide-react";
-import { Container, Section, SectionHeader } from "../ui/Layout";
+import {
+  Package,
+  GitCommit,
+  Rocket
+} from "lucide-react";
+import {
+  Container,
+  Section,
+  SectionHeader
+} from "../ui/Layout";
 import Badge from "../ui/Badge";
-import { useReveal, staggerDelay } from "../../hooks/useReveal";
+import {
+  useReveal,
+  staggerDelay
+} from "../../hooks/useReveal";
 
 const PHASES = [
   {
@@ -73,7 +77,11 @@ export default function Process() {
   const { ref, isVisible } = useReveal();
 
   return (
-    <Section id="process" tone="sunken" className="border-y border-[var(--bt-border-subtle)]">
+    <Section
+      id="process"
+      tone="sunken"
+      className="border-y border-(--bt-border-subtle)"
+    >
       <Container>
         <div ref={ref}>
           <SectionHeader
@@ -88,25 +96,28 @@ export default function Process() {
               ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
           >
             <div className="flex items-center gap-4">
-              <div className="w-11 h-11 flex items-center justify-center rounded-[var(--bt-radius-sm)] border border-[var(--bt-border-subtle)] bg-[var(--bt-surface-sunken)]">
-                <GitCommit className="w-5 h-5 text-[var(--bt-accent-600)]" strokeWidth={1.75} />
+              <div className="w-11 h-11 flex items-center justify-center rounded-(--bt-radius-sm) border border-(--bt-border-subtle) bg-(--bt-surface-sunken)">
+                <GitCommit
+                  className="w-5 h-5 text-(--bt-accent-600)"
+                  strokeWidth={1.75}
+                />
               </div>
               <Badge variant="accent">PHASE-00</Badge>
             </div>
             <div>
-              <h3 className="text-lg font-semibold text-[var(--bt-ink-900)] mb-1">
+              <h3 className="text-lg font-semibold text-(--bt-ink-900) mb-1">
                 Discovery & engineering brief
               </h3>
-              <p className="text-[0.875rem] text-[var(--bt-ink-600)]">
-                A scoping session to translate your idea into an architectural plan.
-                Sprint clock starts the morning after.
+              <p className="text-[0.875rem] text-(--bt-ink-600)">
+                A scoping session to translate your idea into an architectural
+                plan. Sprint clock starts the morning after.
               </p>
             </div>
             <div className="md:text-right">
-              <div className="bt-mono text-[10px] uppercase tracking-[0.14em] text-[var(--bt-ink-500)]">
+              <div className="bt-mono text-[10px] uppercase tracking-[0.14em] text-(--bt-ink-500)">
                 Duration
               </div>
-              <div className="text-[0.9375rem] font-medium text-[var(--bt-ink-900)]">
+              <div className="text-[0.9375rem] font-medium text-(--bt-ink-900)">
                 Pre-sprint
               </div>
             </div>
@@ -117,21 +128,21 @@ export default function Process() {
             <Badge variant="accent" withDot pulse>
               Sprint Active
             </Badge>
-            <div className="flex-1 h-px bg-[var(--bt-border-subtle)]" />
-            <span className="bt-mono text-[10px] uppercase tracking-[0.14em] text-[var(--bt-ink-500)]">
+            <div className="flex-1 h-px bg-(--bt-border-subtle)" />
+            <span className="bt-mono text-[10px] uppercase tracking-[0.14em] text-(--bt-ink-500)">
               10-Day Build Window
             </span>
           </div>
 
           {/* Timeline */}
           <div className="bt-card overflow-hidden">
-            <div className="grid grid-cols-[auto_1fr] divide-y divide-[var(--bt-border-subtle)]">
+            <div className="grid grid-cols-[auto_1fr] divide-y divide-(--bt-border-subtle)">
               {/* Header row */}
-              <div className="col-span-2 grid grid-cols-[120px_1fr] bg-[var(--bt-surface-sunken)] border-b border-[var(--bt-border-subtle)]">
-                <div className="px-6 py-3 bt-mono text-[10px] uppercase tracking-[0.14em] text-[var(--bt-ink-500)] border-r border-[var(--bt-border-subtle)]">
+              <div className="col-span-2 grid grid-cols-[120px_1fr] bg-(--bt-surface-sunken) border-b border-(--bt-border-subtle)">
+                <div className="px-6 py-3 bt-mono text-[10px] uppercase tracking-[0.14em] text-(--bt-ink-500) border-rborder-(--bt-border-subtle)">
                   Day
                 </div>
-                <div className="px-6 py-3 bt-mono text-[10px] uppercase tracking-[0.14em] text-[var(--bt-ink-500)]">
+                <div className="px-6 py-3 bt-mono text-[10px] uppercase tracking-[0.14em] text-(--bt-ink-500)">
                   Milestone
                 </div>
               </div>
@@ -140,7 +151,7 @@ export default function Process() {
               {TIMELINE.map((row, i) => (
                 <div
                   key={i}
-                  className={`col-span-2 grid grid-cols-[120px_1fr] group hover:bg-[var(--bt-surface-sunken)] transition-colors duration-300
+                  className={`col-span-2 grid grid-cols-[120px_1fr] group hover:bg-(--bt-surface-sunken) transition-colors duration-300
                     ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-2"}`}
                   style={{
                     transitionProperty: "opacity, transform",
@@ -150,10 +161,10 @@ export default function Process() {
                   }}
                 >
                   {/* Day cell */}
-                  <div className="px-6 py-6 border-r border-[var(--bt-border-subtle)] flex items-start gap-3">
+                  <div className="px-6 py-6 border-r border-(--bt-border-subtle) flex items-start gap-3">
                     <span
                       className={`bt-mono text-[0.9375rem] font-semibold tracking-tight tabular-nums
-                        ${row.isLast ? "text-[var(--bt-accent-600)]" : "text-[var(--bt-ink-900)]"}`}
+                        ${row.isLast ? "text-(--bt-accent-600)" : "text-(--bt-ink-900)"}`}
                     >
                       {row.day}
                     </span>
@@ -162,10 +173,10 @@ export default function Process() {
                   {/* Content cell */}
                   <div className="px-6 py-6">
                     <div className="flex items-start justify-between gap-4 mb-1">
-                      <h4 className="text-[0.9375rem] font-semibold text-[var(--bt-ink-900)] flex items-center gap-2">
+                      <h4 className="text-[0.9375rem] font-semibold text-(--bt-ink-900) flex items-center gap-2">
                         {row.isLast && (
                           <Rocket
-                            className="w-4 h-4 text-[var(--bt-accent-600)]"
+                            className="w-4 h-4 text-(--bt-accent-600)"
                             strokeWidth={2}
                           />
                         )}
@@ -178,7 +189,7 @@ export default function Process() {
                         </Badge>
                       )}
                     </div>
-                    <p className="text-[0.8125rem] text-[var(--bt-ink-500)] leading-relaxed">
+                    <p className="text-[0.8125rem] text-(--bt-ink-500) leading-relaxed">
                       {row.desc}
                     </p>
                   </div>
@@ -187,7 +198,7 @@ export default function Process() {
             </div>
 
             {/* Footer summary */}
-            <div className="bg-[var(--bt-ink-900)] text-white px-8 py-6 grid sm:grid-cols-3 gap-6">
+            <div className="bg-(--bt-ink-900) text-white px-8 py-6 grid sm:grid-cols-3 gap-6">
               <div>
                 <div className="bt-mono text-[10px] uppercase tracking-[0.14em] text-white/50 mb-1">
                   Tagged deliverables

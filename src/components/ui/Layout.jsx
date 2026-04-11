@@ -1,9 +1,5 @@
-// src/components/ui/Layout.jsx
-// ─────────────────────────────────────────────────────────────
-// Layout primitives shared by every section.
-// ─────────────────────────────────────────────────────────────
-
 export function Container({ children, className = "", as: Tag = "div" }) {
+  const Component = Tag;
   return <Tag className={`bt-container ${className}`}>{children}</Tag>;
 }
 
@@ -14,6 +10,7 @@ export function Section({
   tone = "page", // page | sunken | inverse
   as: Tag = "section",
 }) {
+  const Component = Tag;
   const tones = {
     page:    "bg-[var(--bt-surface-page)] text-[var(--bt-ink-900)]",
     sunken:  "bg-[var(--bt-surface-sunken)] text-[var(--bt-ink-900)]",
@@ -21,9 +18,9 @@ export function Section({
     inverse: "bg-[var(--bt-surface-inverse)] text-white",
   };
   return (
-    <Tag id={id} className={`bt-section ${tones[tone]} ${className}`}>
+    <Component id={id} className={`bt-section ${tones[tone]} ${className}`}>
       {children}
-    </Tag>
+    </Component>
   );
 }
 
