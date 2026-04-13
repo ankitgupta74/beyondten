@@ -47,7 +47,7 @@ export const HERO_TRUST = [
 ];
 
 export const HERO_FOOTER = {
-  slot: "Slot 3 / 3",
+  slot: "Slot 2 / 3",
   status: "1 opening",
   progress: "66%",
 };
